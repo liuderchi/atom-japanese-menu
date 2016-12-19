@@ -1,0 +1,31 @@
+* [ ] understand basic ideas
+    * [ ] how content is changed
+
+* [ ] create common interface for any lang
+    * [ ] def-LOCALE (best to have)
+
+--- MileStone 1 (v0.1)
+
+* [ ] add api to switch to other language by Environment
+
+* [ ] translate more content
+    * [ ] about-page
+    * [ ] goto
+    * [ ] deprecation
+    * [ ] timecop
+    * [ ] style-guide
+    * [ ] welcome
+    * [ ] find
+    * [ ] background-tips
+
+--- MileStone 2 (v1.0)
+
+* [ ] parse existing content
+    * [ ] zh-tw
+
+* [ ] add spec
+
+
+
+package name: atom-i18n
+GOAL: a common interface for any lang, to be Atom Core Module
