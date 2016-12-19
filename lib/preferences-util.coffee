@@ -5,6 +5,7 @@ class PreferencesUtil
     return localized == 'true'
 
   @applySpecialHeading = (area, org, childIdx, text) ->
+    # org: original
     sh = @getTextMatchElement(area, '.section-heading', org)
     return unless sh && !@isAlreadyLocalized(sh)
     sh.childNodes[childIdx].textContent = null
@@ -20,6 +21,8 @@ class PreferencesUtil
     elem.textContent = text
     elem.setAttribute('title', before)
     elem.setAttribute('data-localized', 'true')
+    # NOTE indicator for localized elemnt
+    # TODO elem.setAttribute('data-before-localized', before)
 
   @getTextMatchElement = (area, query, text) ->
     elems = area.querySelectorAll(query)

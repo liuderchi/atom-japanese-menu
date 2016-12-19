@@ -5,6 +5,7 @@ class ContextMenu
     atom.menu.update()
 
   @updateContextMenu: (defC) ->
+    # NOTE set of all contextMenu item: atom.contextMenu.itemSets
     for itemSet in atom.contextMenu.itemSets
       set = defC.Context[itemSet.selector]
       continue if not set

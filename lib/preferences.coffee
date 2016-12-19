@@ -3,9 +3,11 @@ PreferencesSettings = require './preferences-settings'
 
 class Preferences
 
+  # NOTE entry point of setting
   @localize: (defS) ->
+    # NOTE settings.cson
     @defS = defS
-    @updateSettings()
+    @updateSettings()  # first time localize
     atom.workspace.onDidChangeActivePaneItem (item) =>
       if item isnt undefined
         if item.uri isnt undefined
@@ -16,7 +18,7 @@ class Preferences
   @updateSettings: (onSettingsOpen = false) ->
     setTimeout(@delaySettings, 0, onSettingsOpen)
 
-  @delaySettings: (onSettingsOpen) =>
+  @delaySettings: (onSettingsOpen) =>  # NOTE onSettingsOpen is not used
     settingsTab = document.querySelector('.tab-bar [data-type="SettingsView"]')
     settingsEnabled = settingsTab.className.includes 'active' if settingsTab
     return unless settingsTab && settingsEnabled
@@ -79,6 +81,7 @@ class Preferences
     PU.applyTextWithOrg ext, "設定フォルダを開く"
 
   applyInstallPanelOnSwitch = () ->
+    # NOTE localize all headings with force op
     PU.applySectionHeadings(true)
     PU.applyButtonToolbar()
     inst = document.querySelector('div.section:not(.themes-panel)')

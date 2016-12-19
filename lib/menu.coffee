@@ -2,6 +2,7 @@ class Menu
 
   @localize: (defM) ->
     @updateMenu(atom.menu.template, defM.Menu)
+    # NOTE list of menuItem: atom.menu.template api
     atom.menu.update()
 
   @updateMenu: (menuList, def) ->

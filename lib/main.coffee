@@ -19,6 +19,7 @@ class JapaneseMenu
     Menu.localize(@defM)
     ContextMenu.localize(@defC)
     Preferences.localize(@defS)
+    # TODO localize more...
 
 
 module.exports = window.JapaneseMenu = new JapaneseMenu()
