@@ -78,7 +78,7 @@ class Preferences
 
     # Left-side button
     ext = @sv.querySelector('.settings-view .icon-link-external')
-    PU.applyTextWithOrg ext, "設定フォルダを開く"
+    PU.applyTextWithOrg ext, @defS.Settings["btn-open-config-folder"]
 
   applyInstallPanelOnSwitch = () ->
     # NOTE localize all headings with force op

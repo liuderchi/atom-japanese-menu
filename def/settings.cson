@@ -29,6 +29,7 @@ Settings:
       value: "インストール"
     }
   ]
+  "btn-open-config-folder": "設定フォルダを開く"
   sectionHeadings: [
     {label: "Core Settings", value: "コア設定"}
     {label: "Editor Settings", value: "エディタ設定"}
@@ -41,6 +42,7 @@ Settings:
     {label: "Install Themes", value: "テーマのインストール"}
     {label: "Featured Themes", value: "おすすめのテーマ"}
   ]
+  "heading-available-updates": {label: "Available Updates", value: "利用可能なアップデート"}
   subSectionHeadings: [
     {label: "Invisible", value: "不可視文字"}
     {label: "Community Packages", value: "コミュニティパッケージ"}

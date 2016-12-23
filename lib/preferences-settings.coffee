@@ -76,7 +76,7 @@ class PreferencesSettings
       info.setAttribute('data-localized', 'true')
 
   @localizeUpdatesPanel: () =>
-    PU.applySpecialHeading(@sv, "Available Updates", 2, "利用可能なアップデート")
+    PU.applySpecialHeading(@sv, @defS["heading-available-updates"].label, 2, @defS["heading-available-updates"].value)
     PU.applyTextWithOrg(@sv.querySelector('.update-all-button.btn-primary'), "すべてアップデート")
     PU.applyTextWithOrg(@sv.querySelector('.update-all-button:not(.btn-primary)'), "アップデートをチェック")
     PU.applyTextWithOrg(@sv.querySelector('.alert.icon-hourglass'), "アップデートを確認中...")
