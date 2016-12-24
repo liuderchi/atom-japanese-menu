@@ -290,3 +290,12 @@ Settings:
       }
     ]
   }
+  keymaps: {
+    notes: {
+      text1: "これらのキーバインドは　"
+      text2: "をクリック（コピー）して"
+      text3: " キーマップファイル "
+      text4: "に貼り付けると上書きできます。"
+      _template: "text1 <icon /> text2 <a>text3</a> [text4]"
+    }
+  }

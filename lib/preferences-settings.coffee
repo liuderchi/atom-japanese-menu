@@ -51,11 +51,11 @@ class PreferencesSettings
   @localizeKeybindingsPanel: () =>
     info = @sv.querySelector('.keybinding-panel>div:nth-child(2)')
     unless PU.isAlreadyLocalized(info)
-      info.querySelector('span:nth-child(2)').textContent = "これらのキーバインドは　"
-      info.querySelector('span:nth-child(4)').textContent = "をクリック（コピー）して"
-      info.querySelector('a.link').textContent = " キーマップファイル "
+      info.querySelector('span:nth-child(2)').textContent = @defS.keymaps.notes.text1
+      info.querySelector('span:nth-child(4)').textContent = @defS.keymaps.notes.text2
+      info.querySelector('a.link').textContent = @defS.keymaps.notes.text3
       span = document.createElement('span')
-      span.textContent = "に貼り付けると上書きできます。"
+      span.textContent = @defS.keymaps.notes.text4
       info.appendChild(span)
       info.setAttribute('data-localized', 'true')
 
@@ -81,6 +81,9 @@ class PreferencesSettings
     PU.applyTextWithOrg(@sv.querySelector('.update-all-button:not(.btn-primary)'), "アップデートをチェック")
     PU.applyTextWithOrg(@sv.querySelector('.alert.icon-hourglass'), "アップデートを確認中...")
     PU.applyTextWithOrg(@sv.querySelector('.alert.icon-heart'), "インストールしたパッケージはすべて最新です！")
+    # TODO add failure message which is dynamic DOM node
+    # PU.applyTextWithOrg(@sv.querySelector('.alert.alert-danger'), "foo bar Fetching outdated packages and themes failed.")
+    # PU.applyTextWithOrg(@sv.querySelector('.alert-link.error-link'), "foo bar Show output...")
 
   @localizeInstallPanel: () ->
     PU.applySectionHeadings()
