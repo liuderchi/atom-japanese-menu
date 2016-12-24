@@ -59,6 +59,19 @@ class PreferencesSettings
       info.appendChild(span)
       info.setAttribute('data-localized', 'true')
 
+    searchBarPlaceholder = @sv.querySelector('.keybinding-panel>div:nth-child(3) .placeholder-text')
+    unless PU.isAlreadyLocalized(searchBarPlaceholder)
+      searchBarPlaceholder.textContent = @defS.keymaps["search-bar-placeholder"]
+      searchBarPlaceholder.setAttribute('data-localized', 'true')
+
+    keyBindTableHeader = @sv.querySelector('.keybinding-panel>table thead')
+    unless PU.isAlreadyLocalized(keyBindTableHeader)
+      keyBindTableHeader.querySelector('th.keystroke').textContent = @defS.keymaps["table-header-keystroke"]
+      keyBindTableHeader.querySelector('th.command').textContent = @defS.keymaps["table-header-command"]
+      keyBindTableHeader.querySelector('th.source').textContent = @defS.keymaps["table-header-source"]
+      keyBindTableHeader.querySelector('th.selector').textContent = @defS.keymaps["table-header-selector"]
+      keyBindTableHeader.setAttribute('data-localized', 'true')
+
   @localizeThemesPanel: () =>
     info = @sv.querySelector('.themes-panel>div>div:nth-child(2)')
     unless PU.isAlreadyLocalized(info)

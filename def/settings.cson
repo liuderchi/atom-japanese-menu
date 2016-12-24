@@ -298,4 +298,9 @@ Settings:
       text4: "に貼り付けると上書きできます。"
       _template: "text1 <icon /> text2 <a>text3</a> [text4]"
     }
+    "search-bar-placeholder": "キーバインディングの検索"
+    "table-header-keystroke": "キーストローク"
+    "table-header-command": "コマンド"
+    "table-header-source": "ソース"
+    "table-header-selector": "セレクタ"
   }
