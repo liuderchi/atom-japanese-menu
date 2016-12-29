@@ -75,17 +75,17 @@ class PreferencesSettings
   @localizeThemesPanel: () =>
     info = @sv.querySelector('.themes-panel>div>div:nth-child(2)')
     unless PU.isAlreadyLocalized(info)
-      info.querySelector('span').textContent = "Atom は"
-      info.querySelector('a.link').textContent = " スタイルシート "
+      info.querySelector('span').textContent = @defS.themes.notes.text1
+      info.querySelector('a.link').textContent = @defS.themes.notes.text2
       span = document.createElement('span')
-      span.textContent = "を編集してスタイルを変更することもできます。"
+      span.textContent = @defS.themes.notes.text3
       info.appendChild(span)
       tp1 = @sv.querySelector('.themes-picker>div:nth-child(1)')
-      tp1.querySelector('.setting-title').textContent = "インターフェーステーマ"
-      tp1.querySelector('.setting-description').textContent = "タブ、ステータスバー、ツリービューとドロップダウンのスタイルを変更します。"
+      tp1.querySelector('.setting-title').textContent = @defS.themes.title1
+      tp1.querySelector('.setting-description').textContent = @defS.themes.description1
       tp2 = @sv.querySelector('.themes-picker>div:nth-child(2)')
-      tp2.querySelector('.setting-title').textContent = "シンタックステーマ"
-      tp2.querySelector('.setting-description').textContent = "テキストエディタの内側のスタイルを変更します。"
+      tp2.querySelector('.setting-title').textContent = @defS.themes.title2
+      tp2.querySelector('.setting-description').textContent = @defS.themes.description2
       info.setAttribute('data-localized', 'true')
 
   @localizeUpdatesPanel: () =>

@@ -304,3 +304,17 @@ Settings:
     "table-header-source": "ソース"
     "table-header-selector": "セレクタ"
   }
+  packages: {
+  }
+  themes: {
+    notes: {
+      text1: "Atom は"
+      text2: " スタイルシート "
+      text3: "を編集してスタイルを変更することもできます。"
+      _template: "text1 <a>text2</a> text3"
+    }
+    title1: "インターフェーステーマ"
+    description1: "タブ、ステータスバー、ツリービューとドロップダウンのスタイルを変更します。"
+    title2: "シンタックステーマ"
+    description2: "テキストエディタの内側のスタイルを変更します。"
+  }
