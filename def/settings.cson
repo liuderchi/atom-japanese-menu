@@ -318,3 +318,9 @@ Settings:
     title2: "シンタックステーマ"
     description2: "テキストエディタの内側のスタイルを変更します。"
   }
+  updates: {
+    "check-updates": "すべてアップデート"
+    "update-all": "アップデートをチェック"
+    "checking-updates": "アップデートを確認中..."
+    "all-updated-message": "インストールしたパッケージはすべて最新です！"
+  }
