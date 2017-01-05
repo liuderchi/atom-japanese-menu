@@ -60,6 +60,7 @@ class PreferencesSettings
       info.setAttribute('data-localized', 'true')
 
     searchBarPlaceholder = @sv.querySelector('.keybinding-panel>div:nth-child(3) .placeholder-text')
+    # TODO i18n placeholder dynamic content
     unless PU.isAlreadyLocalized(searchBarPlaceholder)
       searchBarPlaceholder.textContent = @defS.keymaps["search-bar-placeholder"]
       searchBarPlaceholder.setAttribute('data-localized', 'true')
@@ -103,15 +104,22 @@ class PreferencesSettings
     inst = document.querySelector('div.section:not(.themes-panel)')
     info = inst.querySelector('.native-key-bindings')
     unless PU.isAlreadyLocalized(info)
-      info.querySelector('span:nth-child(2)').textContent = "パッケージ・テーマは "
+      info.querySelector('span:nth-child(2)').textContent = @defS.install.notes.text1
       tc = info.querySelector('span:nth-child(4)')
-      tc.textContent = tc.textContent.replace("and are installed to", "に公開されており ")
+      tc.textContent = tc.textContent.replace("and are installed to", @defS.install.notes.text2)
       span = document.createElement('span')
-      span.textContent = " にインストールされます。"
+      span.textContent = @defS.install.notes.text3
       info.appendChild(span)
       info.setAttribute('data-localized', 'true')
-    PU.applyTextWithOrg(inst.querySelector('.search-container .btn:nth-child(1)'), "パッケージ")
-    PU.applyTextWithOrg(inst.querySelector('.search-container .btn:nth-child(2)'), "テーマ")
+
+    searchContainer = inst.querySelector('.search-container')
+    placeholder = searchContainer.querySelector('.placeholder-text')
+    placeholder.textContent = @defS.install["searchbar-placeholder"]
+    # TODO i18n placeholder dynamic content
+    unless PU.isAlreadyLocalized(searchContainer)
+      PU.applyTextWithOrg(inst.querySelector('.search-container .btn:nth-child(1)'), @defS.install["btn-packages"])
+      PU.applyTextWithOrg(inst.querySelector('.search-container .btn:nth-child(2)'), @defS.install["btn-themes"])
+      searchContainer.setAttribute('data-localized', 'true')
 
 
 module.exports = PreferencesSettings

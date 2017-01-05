@@ -296,7 +296,7 @@ Settings:
       text2: "をクリック（コピー）して"
       text3: " キーマップファイル "
       text4: "に貼り付けると上書きできます。"
-      _template: "text1 <icon /> text2 <a>text3</a> [text4]"
+      _template: "${text1} <icon /> ${text2} <a>${text3}</a> ${text4}"
     }
     "search-bar-placeholder": "キーバインディングの検索"
     "table-header-keystroke": "キーストローク"
@@ -311,7 +311,7 @@ Settings:
       text1: "Atom は"
       text2: " スタイルシート "
       text3: "を編集してスタイルを変更することもできます。"
-      _template: "text1 <a>text2</a> text3"
+      _template: "${text1} <a>${text2}</a> ${text3}"
     }
     title1: "インターフェーステーマ"
     description1: "タブ、ステータスバー、ツリービューとドロップダウンのスタイルを変更します。"
@@ -323,4 +323,15 @@ Settings:
     "update-all": "アップデートをチェック"
     "checking-updates": "アップデートを確認中..."
     "all-updated-message": "インストールしたパッケージはすべて最新です！"
+  }
+  install: {
+    notes: {
+      text1: "パッケージ・テーマは "
+      text2: "に公開されており "
+      text3: " にインストールされます。"
+      _template: "${text1}<a>atom.io</a>${text2} /path/to/pkg ${text3}"
+    }
+    "searchbar-placeholder": "パッケージを検索する"
+    "btn-packages": "パッケージ"
+    "btn-themes": "テーマ"
   }
