@@ -23,8 +23,8 @@ class Preferences
     settingsEnabled = settingsTab.className.includes 'active' if settingsTab
     return unless settingsTab && settingsEnabled
     try
-      # Tab title
-      settingsTab.querySelector('.title').textContent = "設定"
+      settingsTab.querySelector('.title').textContent = @defS.Settings["tab-title"]
+      # BUG re-open setting tab i18n fails
 
       @sv = document.querySelector('.settings-view')
 
@@ -43,7 +43,8 @@ class Preferences
 
       window.JapaneseMenu.pref.done = true
     catch e
-      console.error "日本語化に失敗しました。", e
+      console.error "I18N failed with locale: ", e
+      # TODO print current locale
 
   @applyFonts: () =>
     if process.platform == 'win32'
@@ -84,9 +85,5 @@ class Preferences
     # NOTE localize all headings with force op
     PU.applySectionHeadings(true)
     PU.applyButtonToolbar()
-    inst = document.querySelector('div.section:not(.themes-panel)')
-    info = inst.querySelector('.native-key-bindings')
-    info.querySelector('span:nth-child(2)').textContent = "パッケージ・テーマは "
-
 
 module.exports = Preferences

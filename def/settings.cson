@@ -1,8 +1,10 @@
 Settings:
+  "tab-title": "設定"
   menu: [
     {
       label: "Core"
       value: "コア設定"
+      # TODO experiment on removing label
     }
     {
       label: "Editor"

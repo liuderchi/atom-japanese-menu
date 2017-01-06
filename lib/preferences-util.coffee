@@ -47,6 +47,8 @@ class PreferencesUtil
         @applyTextWithOrg(el, sh.value)
 
   @applyButtonToolbar = () ->
+    # NOTE button in package updates/install tabs
+    @defS = window.JapaneseMenu.defS.Settings
     sv = document.querySelector('.settings-view')
     for btn in sv.querySelectorAll('.meta-controls .install-button')
       @applyTextWithOrg(btn, "インストール")
