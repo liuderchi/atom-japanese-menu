@@ -337,3 +337,11 @@ Settings:
     "btn-packages": "パッケージ"
     "btn-themes": "テーマ"
   }
+  "control-btns":{
+    install: "インストール"
+    update: "Update to"
+    setting: "設定"
+    uninstall: "アンインストール"
+    disable: "無効にする"
+    enable: "有効にする"
+  }

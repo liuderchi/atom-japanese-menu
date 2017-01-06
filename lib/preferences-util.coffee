@@ -51,14 +51,15 @@ class PreferencesUtil
     @defS = window.JapaneseMenu.defS.Settings
     sv = document.querySelector('.settings-view')
     for btn in sv.querySelectorAll('.meta-controls .install-button')
-      @applyTextWithOrg(btn, "インストール")
+      @applyTextWithOrg(btn, @defS["control-btns"].install)
+      # TODO i18n btn if content starts with "Udate to"
     for btn in sv.querySelectorAll('.meta-controls .settings')
-      @applyTextWithOrg(btn, "設定")
+      @applyTextWithOrg(btn, @defS["control-btns"].setting)
     for btn in sv.querySelectorAll('.meta-controls .uninstall-button')
-      @applyTextWithOrg(btn, "アンインストール")
+      @applyTextWithOrg(btn, @defS["control-btns"].uninstall)
     for btn in sv.querySelectorAll('.meta-controls .icon-playback-pause span')
-      @applyTextWithOrg(btn, "無効にする")
+      @applyTextWithOrg(btn, @defS["control-btns"].disable)
     for btn in sv.querySelectorAll('.meta-controls .icon-playback-play span')
-      @applyTextWithOrg(btn, "有効にする")
+      @applyTextWithOrg(btn, @defS["control-btns"].enable)
 
 module.exports = PreferencesUtil
